@@ -1,0 +1,33 @@
+{
+  "name": "ife-2016",
+  "version": "0.0.1",
+  "description": "Simmer's code for IFE-2016",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simmer-Jun/IFE-2016.git"
+  },
+  "keywords": [
+    "IFE",
+    "Front-End",
+    "Coding"
+  ],
+  "author": "Simmer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Simmer-Jun/IFE-2016/issues"
+  },
+  "homepage": "https://github.com/Simmer-Jun/IFE-2016#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uglifycss": "^1.0.6"
+  }
+}
