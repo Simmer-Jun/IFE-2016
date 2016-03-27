@@ -1,7 +1,7 @@
 ## Stage-1 task-07
 
- * 题目
- * 要求
+ * [题目](http://ife.baidu.com/task/detail?taskId=7)
+ * [要求](http://ife.baidu.com/task/detail?taskId=7)
 
 
 ### 第一次编写总结
@@ -17,6 +17,8 @@
  * 面对对象的CSS 选择器和内容分类易于重复利用
  * 命名采用BEM block-element-modifier  分区块－元素－修饰
  * 在开始之前要花时间来思考如何编写才能使得css文件易于管理/维护/复用 针对具体的项目要有自己的见解
+ * 对于CSS 雪碧图有了更为深入的了解。
+ * 对于一些常见的布局更加熟悉。
 
 ### 第一次编写暴露出的问题
 
@@ -27,7 +29,7 @@
 
 ### CSS Reset Vs CSS Normalize
 
- * CSS Reset相对来说更为的‘暴力’，应该它主张的是不管什么元素都要统一。
+ * CSS Reset相对来说更为的‘暴力’，因为它主张的是不管什么元素都要统一。
  * CSS Normalize 则是温和派，它主张的是尽量不覆盖那些有用的初始样式。
 
 
