@@ -12,7 +12,7 @@
  * task-4 待更新
  * task-5 待更新
  * task-6 待更新
- * [task-7](task-7/README.md)
+ * [task-7](task-7/)
  * task-8 待更新
  * task-9 待更新
  * [ask-10 待更新
