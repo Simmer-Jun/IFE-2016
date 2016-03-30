@@ -1,0 +1,40 @@
+// @mixin
+// 每一种栅格宽度
+makeColumns(size, string)
+    i = 1
+    for i in 1 2 3 4 5 6 7 8 9 10 11 12
+        .col-{string}-{i} 
+            width: (i/12)*100 + '%'
+// 每一个视口样式
+makeViewport(size, string)
+    makeColumns(size, string);
+    .cointainer-full
+        width: 100%;
+    .container 
+        width: size;
+        margin: 0 auto;
+// 循环遍历每一个 breakpoint    
+makeView(props)
+    props = arguments
+    for item, i in props
+        @media screen and (min-width:item[0])
+            makeViewport(item[0], item[1])
+            
+.cointainer-full,.container,.row
+    display: block;
+// 默认最小viewport 占满父元素的宽度
+.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,
+.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,
+.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,
+.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12
+    float: left;
+    width: 100%;
+// 否则根据viewport 的不同应用栅格
+makeView(xs 'xs',sm 'sm', md 'md', lg 'lg', xl 'xl')
+
+
+    
+
+
+
