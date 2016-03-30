@@ -2,6 +2,7 @@
 
  * [题目说明](http://ife.baidu.com/task/detail?taskId=8)
  * [在线demo](http://hisimmer.com/IFE-2016/stage-1/task-8/)
+ * [stylus重构demo](http://hisimmer.com/IFE-2016/stage-1/task-8/stylus.html)
 
 ## 小结 
 3月30更新
@@ -16,3 +17,11 @@
    * 考虑到了留白只需要简单的添加类似`col-md-offset-2`就能在元素的左边添加外边距
    * 因为使用到了百分比宽度，所以可以很简单的实现栅格布局的嵌套
    * 更多的知识移步[这里](http://v4-alpha.getbootstrap.com/layout/grid/#how-it-works)
+
+使用CSS预处理器 [stylus](http://stylus-lang.com/docs/iteration.html)重构任务
+
+ * 使用了mixin 来实现样式的复用
+ * 使用变量来让栅格布局更加flexible
+ * 增加了固定宽度的父容器
+ * layout样式和其他样式分开，利于复用
+ * 使用gulp作为构建工具
