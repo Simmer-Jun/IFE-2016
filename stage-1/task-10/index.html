@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>task-10 - flex 布局</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
+    <style type="text/css">
+    .wrapper {
+        min-height: 500px;
+        padding: 20px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item {
+        border: 1px solid #f00;
+        width: 150px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .item-1 {
+        height: 120px;
+        line-height: 120px;
+    }
+    .item-2 {
+        height: 100px;
+        line-height: 100px;
+    }
+    .item-3 {
+        height: 40px;
+        line-height: 40px;
+    }
+    .item-4 {
+        height: 200px;
+        line-height: 200px;
+        border-color: #00f;
+    }
+    @media screen and (max-width: 640px ) {
+        .wrapper {
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        .item-4 {
+            order: -1;
+            margin:0 0 20px 0;
+        }  
+    }
+    h1 {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+<h1 >task-10 flex布局</h1>
+    <div class="wrapper">
+        <span class="item item-1">box-1</span>
+        <span class="item item-2">box-2</span>
+        <span class="item item-3">box-3</span>
+        <span class="item item-4">box-4</span>
+    </div>
+</body>
+</html>
