@@ -1,0 +1,222 @@
+/*  reset stylesheet  */
+body {
+    font: 14px/1.5 'Microsoft Yahei';
+    background-color: #fff;
+    color: #666;
+}
+h2 {
+    text-align: center;
+}
+.wrapper {
+    margin: 10%;
+}
+.box {
+    margin: 30px auto;
+    text-align: center;
+}
+ul,li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+/*
+******  table stylesheet==>
+*/
+table {
+    width: 500px;
+    margin: 0 auto;
+    color: #000;
+}
+tr:nth-child(n+1) {
+    text-align: left;
+} 
+.my-col:first-child {
+    width: 20%;
+}
+.my-col:nth-child(2) {
+    width: 50%;
+} 
+.my-col:nth-child(3) {
+    width: 30%;
+}
+thead {
+    color: #fff;
+    background-color: #000;
+    text-align: left;
+}
+.my-tbody tr:nth-child(2n) {
+    background-color: #ccc;
+}
+.my-tbody tr:nth-child(2n + 1) {
+    background-color: #fff;
+} 
+.my-tbody tr:nth-last-child(n+6) {
+    background-color: #f00;
+}
+/*
+*******  input stylesheet==>
+*/
+.my-input {
+    width: 180px;
+    height: 24px;
+    padding: 0 6px;
+    outline: none;
+    border: 1px solid #666;
+    font-size: 12px;
+    line-height: 24px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.my-input:focus {
+    width: 300px;
+    border-color: #f00;
+}
+
+/*
+******  banner stylesheet==>
+*/
+
+.slider-in {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    margin: 0 auto;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.slider {
+    width: 900px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-animation: slider 6s ease-in-out infinite;
+    animation: slider 6s ease-in-out infinite;
+
+}
+.order-box {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 120px;
+    height: 26px;
+}
+.order-box a {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
+    border: 1px solid #fff;
+    line-height: 24px;
+    text-align: center;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.order-box a:hover {
+    background-color: #fff;
+    color: #666;
+}
+.slider-item {
+    width: 300px;
+    height: 100%;
+    float: left;
+    font-size: 24px;
+    line-height: 180px;
+    text-align: center;
+    color: #fff;
+}
+/*  nth-child select */
+.slider-item:nth-child(1) {
+     background-color: #c8516f;
+}
+.slider-item:nth-child(2) {
+     background-color: #4BBFC3;
+}
+.slider-item:nth-child(3) {
+     background-color: #666;
+}
+
+/* css3 target select stylesheey*/
+#check-one:target  ~ .slider  {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation: none;
+    animation: none;
+}
+#check-two:target  ~ .slider  {
+    -webkit-transform: translateX(-33.333%);
+    transform: translateX(-33.333%);
+    -webkit-animation: none;
+    animation: none;
+}
+#check-tree:target  ~ .slider  {
+    -webkit-transform: translateX(-66.666%);
+    transform: translateX(-66.666%);
+    -webkit-animation: none;
+    animation: none; 
+}
+/* keyframes */
+@-webkit-keyframes slider {
+    0% {
+       -webkit-transform: translateX(0); 
+    }
+    20% {
+        -webkit-transform: translateX(0); 
+    }
+    33.3% {
+        -webkit-transform: translateX(-33.333%); 
+    }
+    53.3% {
+        -webkit-transform: translateX(-33.333%); 
+    }
+    66.6% {
+        -webkit-transform: translateX(-66.666%); 
+    }
+    86.6% {
+         -webkit-transform: translateX(-66.666%); 
+    }
+    100% {
+         -webkit-transform: translateX(0); 
+    }
+}
+@keyframes slider {
+    0% {
+       transform: translateX(0); 
+    }
+    20% {
+       transform: translateX(0); 
+    }
+    33.3% {
+       transform: translateX(-33.333%); 
+    }
+    53.3% {
+       transform: translateX(-33.333%); 
+    }
+    66.6% {
+       transform: translateX(-66.666%); 
+    }
+    86.6% {
+        transform: translateX(-66.666%); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
