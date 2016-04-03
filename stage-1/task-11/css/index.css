@@ -1,5 +1,106 @@
 body {
     font: 12px/1.5 'Microsoft Yahei';
-    background-color: #fff;
-    color: #666;
+    background-color: rgb(245,245,245);
+    color: rgb(104,104,104);
+    padding: 0;
 }
+ul,li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/* icon-font */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.icon {
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.clearfix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*
+**********  section stylesheet ==>
+*/
+.section {
+    background-color: #fff;
+    margin-top: 12px;
+}
+.section:first-child {
+    margin-top: 0;
+}
+
+/*
+********* section one ==>
+*/
+.section-header { 
+    text-align: center;
+}
+header {
+    height: 40px;
+    background-color: #91d4da;
+    color: #fff;
+    line-height: 40px;
+}
+.left {
+    float: left;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.left .icon {
+    font-size: 20px;
+    vertical-align: bottom;
+}
+.header-titile {
+    margin: 0 62px;
+    font-size: 18px;
+    text-align: center;
+}
+nav {
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav-item {
+    float: left;
+    width: 20%;
+    height: 36px;
+    border-bottom: 4px solid #fff;
+    line-height: 36px;
+}
+.nav-item.active{
+    border-color: #94d3dc;
+}
+.banner {
+    height: 240px;
+    background: url(../images/banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+.tag {
+    height: 80px;
+}
+.tag-item {
+    width: 20%;
+}
+
