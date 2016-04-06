@@ -11,11 +11,17 @@
     }
 }('$', function() {
     var $ = function() {
-        return new $.prototype.init(argumnets);
+        return new $.prototype.init(arguments);
     };
     $.prototype = {
         init: function( ) {
+            //
         }
     };
+    $.prototype = $.prototype.init.prototype; // change prototype
+    $.eventUtil = {
+        on: function(type, element, handler) {
+        }
+    }
     return $;
 }));
