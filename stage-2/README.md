@@ -3,6 +3,7 @@
 这里是百度IFE2016春季班的第二阶段任务代码。 javascript基础练习
 
  * [任务列表](http://ife.baidu.com/task/all)
+ * [在线demo](http://hisimmer.com/IFE-2016/stage-2/task-18/)
 
 ### 目录
 
