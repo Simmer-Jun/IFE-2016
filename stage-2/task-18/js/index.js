@@ -54,9 +54,11 @@ window.onload = function( ) {
             }
         }
     };
-    // 事件代理
-    var event = {
-        //
-    }
+    // event delegate
+    window.$.eventUtil.delegate('span', document.getElementById('result-box'), 'click', function (e) {
+        var element = e.target || e.srcElement;
+        alert('remove: ' + element.innerText)
+        window.list.cache.removeChild(element);
+    });
 
 };
