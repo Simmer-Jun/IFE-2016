@@ -14,14 +14,20 @@
     }
 }(window, '$' , function() {
     var $ = function() {
-        return new $.prototype.init(arguments);
+        return new $.prototype.init(selector, context);
     };
     $.prototype = {
         init: function( ) {
-            //
+            //if()
         }
     };
-    $.prototype = $.prototype.init.prototype; // change prototype
+    var jQuery = $;
+    jQuery.fn = $.prototype;
+    $.extend = $.prototype.extend = function( ) {
+        //
+    }
+    $.prototype.init.prototype = $.prototype; // change prototype
+    
 
     $.eventUtil = (function(element) {
         var ret;

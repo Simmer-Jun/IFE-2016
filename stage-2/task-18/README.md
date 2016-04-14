@@ -1,6 +1,7 @@
 ## task-18  基础JavaScript练习（一）
 
  * [任务说明](http://ife.baidu.com/task/detail?taskId=18)
+ * [在线demo](http://hisimmer.com/IFE-2016/stage-2/task-18/)
 
 ### 小结
 
