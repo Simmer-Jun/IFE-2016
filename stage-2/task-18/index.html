@@ -16,5 +16,21 @@
     </div>
     <script type="text/javascript" src="../../common/js/utils.js"></script>
     <script type="text/javascript" src="js/index.js" defer="defer"></script>
+    <script type="text/javascript">
+        // onload 回调
+        window.onload = function() {
+            window.name = 'window';
+            var Cons = function () {
+                this.name = 'new obj';
+            };
+            Cons.prototype.sayHi = function() {
+                console.log(this.name);
+            }
+            var b = Cons.prototype.sayHi;
+            b(); // window
+            console.log(window.b); // undefined
+
+        };
+    </script>
 </body>
 </html>

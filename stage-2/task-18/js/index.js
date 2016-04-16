@@ -60,5 +60,4 @@ window.onload = function( ) {
         alert('remove: ' + element.innerText)
         window.list.cache.removeChild(element);
     });
-
 };
