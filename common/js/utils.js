@@ -13,19 +13,87 @@
         root.$ = factory();
     }
 }(window, '$' , function() {
-    var $ = function() {
-        return new $.prototype.init(arguments);
+    var $ = function(string) {
+        return document.querySelector(string);
+        //return new $.prototype.init(selector, context);
     };
     $.prototype = {
         init: function( ) {
             //
         }
     };
-    $.prototype = $.prototype.init.prototype; // change prototype
+    var jQuery = $;
+    jQuery.fn = $.prototype;
+    $.extend = $.prototype.extend = function( ) {
+        //
+    }
+    $.prototype.init.prototype = $.prototype; // change prototype
 
-    $.eventUtil = (function(element) {
+    // 排序算法
+    $.sort = {
+        // 快排 默认升序排序
+        quickSort: function(arr) {
+            var left,right;
+            if(arr.length <= 1) return arr;
+            left = [];
+            right = [];
+            var pivotIndex = Math.floor(arr.length/2);
+            var pivot = arr.splice(pivotIndex, 1)[0]; // return arr
+            var left = [];
+            var right = [];
+            for(var i = 0, l = arr.length; i < l ; i++) {
+                if(arr[i] > pivot) { 
+                    right.push(arr[i]);
+                } else {
+                    left.push(arr[i])
+                }
+            }
+            // 递归调用
+            return ret = arguments.callee(left).concat([pivot],arguments.callee(right));
+            
+        },
+        // 插入排序
+        insertionSort: function(arr) {
+            /* bad function
+            var retArr = [],
+            i = 1,
+            j = 0,
+            l = arr.length,
+            key;
+            if(arr && arr.length <=1) return arr;
+            retArr.push(arr.pop());
+            l--;
+            for(; i < l; i++) {
+                if(arr.length <=0 ) break;
+                j = i - 1; // 每次重新更新j的长度
+                key = arr.pop(); 
+                while(j>=0 && retArr[j] > key) {
+                    retArr[j+1] = retArr[j];
+                    j--;
+                }
+                retArr[j+1] = key;
+            }
+            return retArr;
+            */
+            // good
+            if(!arr || !arr.length || arr.length <= 1) return arr;
+            var key, i, j, l;
+            for(i = 1, l = arr.length; i < l; i++) {
+                key = arr[i]; // 更新key
+                j = i - 1; // 更新j
+                while( j>= 0 && arr[j] > key) {
+                    arr[j+1] = arr[j];
+                    j--;
+                }
+                arr[j+1] = key;
+            }
+            return arr;
+        }
+    }
+    // 绑定事件
+    $.eventUtil = (function( ) {
         var ret;
-        if(element.addEventListener) {
+        if(document.addEventListener) {
             ret =  {
                 on: function(element, type, handler) {
                     element.addEventListener(type, handler, false);
@@ -34,7 +102,7 @@
                     element.removeEventListener(type, handler, false);
                 }
             };
-        } else if(element.attachEvent) {
+        } else if(documnet.attachEvent) {
             ret = {
                 on: function(element, type, handler) {
                     element.attachEvent('on'+ type, handler);
