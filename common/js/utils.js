@@ -49,7 +49,7 @@
                 }
             }
             // 递归调用
-            return arguments.callee(left).concat([pivot],arguments.callee(right));
+            return ret = arguments.callee(left).concat([pivot],arguments.callee(right));
             
         },
         // 插入排序
@@ -82,7 +82,7 @@
                 key = arr[i]; // 更新key
                 j = i - 1; // 更新j
                 while( j>= 0 && arr[j] > key) {
-                    arr[j+1] = arr[j]
+                    arr[j+1] = arr[j];
                     j--;
                 }
                 arr[j+1] = key;
@@ -91,9 +91,9 @@
         }
     }
     // 绑定事件
-    $.eventUtil = (function(element) {
+    $.eventUtil = (function( ) {
         var ret;
-        if(element.addEventListener) {
+        if(document.addEventListener) {
             ret =  {
                 on: function(element, type, handler) {
                     element.addEventListener(type, handler, false);
@@ -102,7 +102,7 @@
                     element.removeEventListener(type, handler, false);
                 }
             };
-        } else if(element.attachEvent) {
+        } else if(documnet.attachEvent) {
             ret = {
                 on: function(element, type, handler) {
                     element.attachEvent('on'+ type, handler);
