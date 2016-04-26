@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>任务三十：表单（二）多个表单项的动态校验</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <form action="##" id="myform">
+        <div> <label for="name">名称</label> <input type="text" name="name" id="name" class="" data-name="name:0"> </div>
+        <div class="tips">请输入合适的名称4～12位</div>
+        <div> <label for="password">密码</label> <input type="password" name="password" id="password" class="" data-name="password:1"></div>
+        <div class="tips">请输入密码</div>
+        <div> <label for="confirmPass">确认密码</label> <input type="password" name="confirmPass" id="confirmPass" data-name="confirmPass:2"> </div>
+        <div class="tips">确认密码</div>
+        <div> <label for="email">邮箱</label> <input type="text" name="email" id="email" data-name="email:3"> </div>
+        <div class="tips">输入邮箱号</div>
+        <div> <label for="phone">手机</label> <input type="text" name="phone" id="phone" data-name="phone:4"> </div>
+        <div class="tips">输入手机号</div>
+        <div><button id="btn" title="submit">提交</button></div>
+    </form>
+    <script type="text/javascript" src="../../common/js/utils.js"></script>
+   <script type="text/javascript" defer="defer" src="js/index.js"></script> 
+</body>
+</html>
