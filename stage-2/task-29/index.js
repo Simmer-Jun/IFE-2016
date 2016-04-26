@@ -56,7 +56,6 @@ window.onload = function() {
         start: function() {
             var cache = validator.cache;
             var ret;
-            //console.log(cache);
             for(var i = 0, l = cache.length; i < l; i++) {
                 if(ret = cache[i]()) { // 如果有返回值 则证明校验没有通过
                    return ret;
@@ -65,7 +64,7 @@ window.onload = function() {
         }
     }
     var handler = function(e) {
-        // 组织事件的默认行为
+        // 阻止事件的默认行为
         e = e || wndow.even;
         e.preventDefault();
         e.returnValue = false;
