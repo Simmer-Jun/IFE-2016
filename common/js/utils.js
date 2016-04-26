@@ -95,11 +95,11 @@
         var ret;
         if(document.addEventListener) {
             ret =  {
-                on: function(element, type, handler) {
-                    element.addEventListener(type, handler, false);
+                on: function(element, type, handler, b) {
+                    element.addEventListener(type, handler, b || false);
                 },
                 un: function(element, type, handler) {
-                    element.removeEventListener(type, handler, false);
+                    element.removeEventListener(type, handler, b || false);
                 }
             };
         } else if(documnet.attachEvent) {
@@ -129,6 +129,16 @@
                     handler(e);
                 }
             });
+        }
+        ret.delegateCapture = function(tagName, parentElement, type, handler) {
+            ret.on(parentElement, type, function(e) {
+                e = e || window.event;
+                var element = e.target || e.srcElement;
+                if(element.nodeType ===1 && element.tagName === tagName.toUpperCase()) {
+                    handler(e);
+                }
+            }, true);
+            
         }
         return ret;
     })(document);
